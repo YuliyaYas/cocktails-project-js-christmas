@@ -11,9 +11,7 @@ class Drink {
                   <img src="${this.url}" alt="${this.name}" width="300" height="200">
                   <div class="desc">${this.name}</div>
               </div> `
-// `<img src="${this.url}">`
 
   }
 }
-
-Drink.all = []
+ Drink.all = []

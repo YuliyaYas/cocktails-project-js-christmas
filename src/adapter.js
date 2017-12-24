@@ -7,9 +7,11 @@ class Adapter {
       const newDrink = new Drink(drink);
       const right = document.getElementById("right-side")
       right.innerHTML += newDrink.render()
+      
     }))
 
   }
+
 
 //
 
