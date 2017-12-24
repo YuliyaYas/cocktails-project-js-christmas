@@ -7,8 +7,12 @@ class Drink {
   }
   render(){
     // const div = document.createEleme
-    return `<div id=${this.id}><p>${this.name}</p><img src="${this.url}">`
-    // <img src="${this.url}">
+    return   `<div class="gallery">
+                  <img src="${this.url}" alt="${this.name}" width="300" height="200">
+                  <div class="desc">${this.name}</div>
+              </div> `
+// `<img src="${this.url}">`
+
   }
 }
 

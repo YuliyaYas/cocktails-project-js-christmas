@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+header{
+	height: 100px;
+	position: absolute;
+	width: 100%;
+	top:0;
+	background-color: #ffffff;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: red;
+}
+
+
+main{
+  position: absolute;
+	margin-top: 80px;
+	height: 100%;
+	width: 100%;
+}
+
+/*footer{
+	height: 80px;
+	border:1px solid red;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+}*/
+
+
+div.fixed {
+  position: absolute;
+    top: 22px;
+    left: 10px;
+  font-family: "Chalkboard SF", Georgia, Serif;
+  color: #49b7a7;
+  font-size: 3.9rem;
+  margin-left: 30px;
+}
+
+
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+/*Images galery*/
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    background-color: #ffffff;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    height: 70px;
+    color: #2b7066;
+    background-color: #ffffff;
+}
+
+/*search */
+#drink-search-input {
+    border-radius: 7px;
+    font-size: 1.3rem;
+    border: 2px solid #49b7a7;
+    color: #2c514c;
+}
+
+#drink-search-form {
+      width:500px;
+      margin:auto;
+      margin-top:50px;
+    }
+
+  /*right and left sides*/
+
+  #left-side{
+    position: absolute;
+    left: -8px;
+    top: 22px;
+    width: 20%;
+    margin-left: 30px;
+
+  }
+
+  #right-side{
+
+    position: absolute;
+    right: 0px;
+    width: 80%;
+
+  }
+
+  #right-side-search{
+    position: absolute;
+      top: 0px;
+      right: 25px;
+  }
+
+  #ingredient-input{
+    border-radius: 6px;
+    font-size: 1rem;
+    border: 1px solid #49b7a7;
+    color: #2c514c;
+    background-color: #f7fcfb;
+  }
+
+  #button{
+    height: 23px;
+    width: 60px;
+    border-radius: 6px;
+    border: 1px solid #2c514c;
+    background-color: #49b7a7;
+  }
