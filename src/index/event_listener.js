@@ -1,5 +1,5 @@
 class EventListener {
-  static formInput(){
+  static search(){
     const input = document.getElementById("drink-search-input");
     input.addEventListener("input", e => {
     const inputValue = e.target.value.trim().toLowerCase();
@@ -12,9 +12,14 @@ class EventListener {
         return filter.map(drink => {
           return drink.render()
         }).join("");
-      }
+      };
      });
   };
+
+  static showCocktail(){
+    const cocktail = document.getElementsByClassName("gallery")
+    // addEventListener("click", alert("hi"))
+  }
 
 
 }
