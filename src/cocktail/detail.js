@@ -5,7 +5,7 @@ class Detail {
     this.glass = data.strGlass;
     this.instructions = data.strInstructions;
     this.url = data.strDrinkThumb;
-    // this.recipe = makeRecipe(data)
+    this.recipe = makeRecipe(data)
     Detail.all.push(this);
   }
 
@@ -18,7 +18,9 @@ class Detail {
   }
 
   renderInfo(){
-    return `<h3 style="color:white">Glass: </h3> <p style="color:white">${this.glass}</p>
+    return `<h3 style="color:white">Ingredients: </h3> <p style="color:white">${this.recipe}</p>
+            <br>
+            <h3 style="color:white">Glass: </h3> <p style="color:white">${this.glass}</p>
             <br>
             <h3 style="color:white">Instruction: </h3><p style="color:white">${this.instructions}</p>`
 
@@ -27,15 +29,19 @@ class Detail {
 }
  Detail.all = []
 
-  // function makeRecipe(data){
-  //   let i=1;
-  //   let recipe = "";
-  //   while (i<12) {
-  //     let ingr = "strIngredient"+i;
-  //     let meas = "strMeasure"+i;
-  //     if ((data[ingr])&&(data[meas])) {
-  //       recipe += (data[ingr] + " " + data[meas])
-  //     }
-  //     ++i
-  //   }
-  // }
+  function makeRecipe(data){
+    let i=1;
+    let recipe = "";
+    while (true) {
+      let ingr = "strIngredient"+i;
+      let meas = "strMeasure"+i;
+      if ((data[ingr])&&(data[meas])) {
+        recipe += (data[ingr] + " " + data[meas]+"<br></br>")
+      }
+      else {
+        break;
+      }
+      ++i
+    }
+  return recipe;
+  }
