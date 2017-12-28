@@ -103,6 +103,7 @@ div.desc {
 #drink-search-input {
     border-radius: 7px;
     font-size: 1.3rem;
+    width: 245px;
     border: 2px solid #49b7a7;
     color: #2c514c;
 }
@@ -110,7 +111,6 @@ div.desc {
 #drink-search-form {
       width:500px;
       margin:auto;
-      margin-top:50px;
     }
 
   /*right and left sides*/
@@ -129,7 +129,7 @@ div.desc {
     left: 100px;
     top: 110px;
     width: 33%;
-    margin-left: 30px;
+    margin-left: 180px;
   }
 
   #right-side{
@@ -141,10 +141,10 @@ div.desc {
   }
 
   #right-side-info {
-      position: absolute;
-      right: 245px;
-      width: 43%;
-      top: 90px;
+    position: absolute;
+    right: 315px;
+    width: 27%;
+    top: 73px;
   }
 
   #right-side-search{
@@ -175,3 +175,24 @@ div.desc {
             padding: 4px;
             background: white;
         }
+
+  .column {
+    float: left;
+    width: 50%;
+  }
+
+        /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  ::-webkit-input-placeholder {
+ font-size: 16px;
+ color: #89a7b2;
+ text-transform: uppercase;
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold;
+}

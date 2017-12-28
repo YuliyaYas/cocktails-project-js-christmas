@@ -15,5 +15,14 @@ class Drink {
               </div> `
 
   }
+
+  renderRandom(){
+    // const div = document.createEleme
+    return   `<div><a href="./cocktail.html#${this.id}">
+              <img src="${this.url}" alt="${this.name}" width="245" height="280">
+              </a></div>`
+
+  }
+
 }
  Drink.all = []

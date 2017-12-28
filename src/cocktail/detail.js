@@ -18,11 +18,15 @@ class Detail {
   }
 
   renderInfo(){
-    return `<h3 style="color:white">Ingredients: </h3> <p style="color:white">${this.recipe}</p>
-            <br>
-            <h3 style="color:white">Glass: </h3> <p style="color:white">${this.glass}</p>
-            <br>
-            <h3 style="color:white">Instruction: </h3><p style="color:white">${this.instructions}</p>`
+    return `<div class="row">
+              <div class="column">
+                  <h3 style="color:white">Glass: </h3> <p style="color:white">${this.glass}</p>
+              </div>
+              <div class="column">
+                  <h3 style="color:white">Ingredients: </h3>
+                  <p style="color:white">${this.recipe}</p>
+              </div>
+            <div class="yo"><h3 style="color:white">Instructions: </h3><p style="color:white">${this.instructions}</p><div>`
 
   }
 

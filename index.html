@@ -9,18 +9,18 @@
       <header>
           <section id="header-1" class="header-1">
             <div id="left-side-1" class="left-side">
-                <div class="fixed">
+              <a href="file:///Users/flatironschool/cocktails-project-js-christmas/index.html"><div class="fixed">
                     MixUP
-                </div>
+                </div></a>
                 <img src="https://i.pinimg.com/originals/81/35/ff/8135ffafac27091e4c1985df221366e1.jpg" id="logo">
                 <br>
                 <br>
                 <center><p>Enter the ingredients you have and find a perfect cocktails recipe! </p><center>
             </div>
             <div id="right-side-search" class="right-side" align="right">
-              <form id="drink-search-form" class="" action="" method="post">
+              <!-- <form id="drink-search-form" class="" action="" method="post">
                 <input id="drink-search-input" type="text" placeholder="Search by name" name="" value="">
-              </form>
+              </form> -->
             </div>
           </section>
       </header>
@@ -31,12 +31,19 @@
       <main>
         <section id="main-1" class="main-1" >
           <div id="left-side" class="left-side">
+            <form id="drink-search-form" class="" action="" method="post">
+              <input id="drink-search-input" type="text" placeholder="Search by name" name="" value="">
+            </form>
+            <br>
             <form id="search-by-ingredients-form" class="" action="" method="post">
               <textarea rows="4" cols="28" id="ingredient-input" type="text" placeholder="Enter your ingredients.." name="" value=""></textarea>
-              <button id="button" type="button" name="button">Find My Cocktails!</button>
+              <button id="button" type="button" name="button"><b style="color:white;">FIND MY COCKTAILS</b></button>
             </form>
-
-
+            <br>
+            <br></br>
+            <h2 style="color:white;font-size: 22px"> Check out this cocktail!</h2>
+            <div id="random-drink">
+            </div>
 
           </div>
           <div id="right-side" class="right-side">
