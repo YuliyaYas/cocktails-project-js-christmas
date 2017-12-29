@@ -22,40 +22,66 @@ class Adapter {
   }
 
 
-  static getCocktailbyId(id){
-    fetch("http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}")
-    .then(resp => resp.json())
-    .then(json => { const drinkById = json.drinks[0]
-      // console.log(drinkById);
-})
-  }
-  static getDetails(ingredients){
-  var names = ["vodka", "gin", "lemon"];
-  let ids = {};
-  const makeFetch = function(name) {
-    let url = "http://www.thecocktaildb.com/api/json/v1/1/filter.php?i="+name;
-    return fetch(url).then(res => res.json());
-     }
 
-  Promise
-      .all(names.map(makeFetch))
-      .then(searchResultArr => searchResultArr.forEach(function(result, index) {
-        const allDrinks = result.drinks;
-        let all=[];
-        allDrinks.forEach(drink => all.push(drink["idDrink"]));
-        const i = names[index];
-        ids[i]=all;
+  static getDetails(ingredients){
+    const makeFetch = function(name) {
+      let url = "http://www.thecocktaildb.com/api/json/v1/1/filter.php?i="+name;
+      return fetch(url).then(resp => resp.text()).then((respText) => {
+        try {
+          return JSON.parse(respText); // there's always a body
+        } catch (error) {
+            return {};
+          }
+      });
+    };
+
+    let resultDrinks = {};
+    let ids = [];
+
+    Promise
+        .all(ingredients.map(makeFetch))
+        .then(searchResultArr => searchResultArr.forEach(function(result, index) {
+          const allDrinks = result.drinks;
+
+          if(!allDrinks){
+            return;
+          }
+          allDrinks.forEach(function(drink) {
+            if (resultDrinks[drink["idDrink"]]){
+               resultDrinks[drink["idDrink"]]["count"]++;
+            }
+            else {
+              drink["count"] = 1;
+              resultDrinks[drink["idDrink"]] = drink;
+            }
+          });
+
+        }
+      )).then(function(){
+        console.log(resultDrinks);
+        for(let key in resultDrinks){
+          ids.push(resultDrinks[key])
+        }
+
+        ids.sort(function (a,b){
+          if (a.count < b.count)
+            return 1;
+          if (a.count > b.count)
+            return -1;
+          return 0;
+        })
         console.log(ids);
 
-      }
+        const container = document.getElementById("right-side");
+        container.innerHTML = ""
+        ids.forEach(function(drink){
+          renderEl(drink);
+        })
 
 
-      ))
-
+      });
 
   }
-
-
 
 
 }
