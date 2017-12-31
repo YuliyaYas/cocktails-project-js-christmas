@@ -24,10 +24,12 @@ class Adapter {
 
 
   static getDetails(ingredients){
+
     const makeFetch = function(name) {
       let url = "http://www.thecocktaildb.com/api/json/v1/1/filter.php?i="+name;
       return fetch(url).then(resp => resp.text()).then((respText) => {
         try {
+
           return JSON.parse(respText); // there's always a body
         } catch (error) {
             return {};
@@ -58,7 +60,6 @@ class Adapter {
 
         }
       )).then(function(){
-        console.log(resultDrinks);
         for(let key in resultDrinks){
           ids.push(resultDrinks[key])
         }

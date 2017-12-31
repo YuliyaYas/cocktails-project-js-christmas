@@ -30,34 +30,17 @@ main{
 	width: 100%;
 }
 
-/*footer{
-	height: 80px;
-	border:1px solid red;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	background-color: red;
-}*/
+
 
 
 div.fixed {
   position: absolute;
-    top: 22px;
-    left: 10px;
-  font-family: "Chalkboard SF", Georgia, Serif;
-  color: #49b7a7;
-  font-size: 3.9rem;
+  top: 12px;
+  left: 68px;
+  font-family: "Impact", Georgia, Serif;
+  color: #032866;
+  font-size: 4.5rem;
   margin-left: 30px;
-}
-
-#logo {
-    position: absolute;
-    top: 22px;
-    left: 10px;
-    /* font-family: "Chalkboard SF", Georgia, Serif; */
-    /* color: #49b7a7; */
-    margin-left: 238px;
-    width: 70px;
 }
 
 .header {
@@ -97,6 +80,22 @@ div.desc {
     color: #2b7066;
     background-color: #ffffff;
     border-radius: 11px
+}
+
+#logo {
+    position: absolute;
+    top: -6px;
+    left: -213px;
+    margin-left: 238px;
+    width: 68px;
+}
+#button{
+  height: 33px;
+  width: 246px;
+  border-radius: 6px;
+  border: 1px solid #2c514c;
+  background-color: #49b7a7;
+  font-size: 17px;
 }
 
 /*search */
@@ -161,14 +160,6 @@ div.desc {
     background-color: #f7fcfb;
   }
 
-  #button{
-    height: 33px;
-    width: 246px;
-    border-radius: 6px;
-    border: 1px solid #2c514c;
-    background-color: #49b7a7;
-    font-size: 17px;
-  }
 
   img {
             border-radius: 10px;
@@ -195,4 +186,42 @@ div.desc {
  text-transform: uppercase;
  text-align: center;
  font-weight: bold;
+}
+
+#right{
+  position: absolute;
+  right: 21px;
+  top: 65px;
+  color: #05337f;
+  font-size: 13pt;
+}
+
+
+.content {
+  margin-left: auto;
+ margin-right: auto;
+ padding: 300px;
+ background-color: rgba(245,245,245,0.08);
+ min-width: 250px;
+ max-width: 83%;
+ left: 124px;
+ border-radius: 10px;
+}
+
+.content-header {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.01px;
+  background-color: rgba(245,245,245,0.08);
+  max-width: 83%;
+  border-radius: 10px;
+}
+
+.stroke{
+  color: white;
+  text-shadow:
+   -1.3px -1.3px 0 #032866,
+    1.3px -1.3px 0 #032866,
+   -1.3px 1.3px 0 #032866,
+    1.3px 1.3px 0 #032866;
 }

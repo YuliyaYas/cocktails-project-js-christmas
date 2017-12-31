@@ -12,9 +12,8 @@ class Detail {
   renderDetail(){
     return   `<img src="${this.url}" alt="${this.name}" width="400" height="400">`
   }
-
   renderTitle(){
-    return `<center><h1 style="color:white;">${this.name}</h1><center>`
+    return `<div class="content-header"><center><h1 style="color:white;font-family: Impact;letter-spacing: 2px;">${this.name}</h1></center></div>`
   }
 
   renderInfo(){
